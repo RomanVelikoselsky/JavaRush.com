@@ -31,7 +31,6 @@ public class FileManager {
         // Добавляем содержимое директории
         if (Files.isDirectory(path)) {
             // Рекурсивно проходимся по всему содержмому директории
-            // Чтобы не писать код по вызову close для DirectoryStream, обернем вызов newDirectoryStream в try-with-resources
             try (DirectoryStream<Path> directoryStream = Files.newDirectoryStream(path)) {
                 for (Path file : directoryStream) {
                     collectFileList(file);

@@ -48,7 +48,6 @@ public class Ball extends BaseObject {
     /**
      * Устанавливаем новое направление движения.
      * Тут же вычисляем и новый вектор.
-     * Такой подход удобно использовать при отскоках от стен.
      */
     void setDirection(double direction) {
         this.direction = direction;
